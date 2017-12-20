@@ -33,17 +33,17 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btndelbook = new System.Windows.Forms.Button();
+            this.btnnewbook = new System.Windows.Forms.Button();
+            this.btnpopbook = new System.Windows.Forms.Button();
+            this.btnmodbook = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnnewnote = new System.Windows.Forms.Button();
+            this.btndelnote = new System.Windows.Forms.Button();
+            this.btnsavenote = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -58,9 +58,11 @@
             this.columnHeader4});
             this.listView1.FullRowSelect = true;
             this.listView1.Location = new System.Drawing.Point(3, 3);
+            this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
+            this.listView1.Scrollable = false;
             this.listView1.Size = new System.Drawing.Size(442, 169);
-            this.listView1.TabIndex = 0;
+            this.listView1.TabIndex = 7;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
@@ -83,45 +85,45 @@
             this.columnHeader4.Text = "% Perskaityta";
             this.columnHeader4.Width = 120;
             // 
-            // button1
+            // btndelbook
             // 
-            this.button1.Location = new System.Drawing.Point(3, 146);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btndelbook.Location = new System.Drawing.Point(3, 146);
+            this.btndelbook.Name = "btndelbook";
+            this.btndelbook.Size = new System.Drawing.Size(75, 23);
+            this.btndelbook.TabIndex = 3;
+            this.btndelbook.Text = "Delete";
+            this.btndelbook.UseVisualStyleBackColor = true;
+            this.btndelbook.Click += new System.EventHandler(this.btndelbook_Click);
             // 
-            // button2
+            // btnnewbook
             // 
-            this.button2.Location = new System.Drawing.Point(2, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Add new";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnnewbook.Location = new System.Drawing.Point(2, 32);
+            this.btnnewbook.Name = "btnnewbook";
+            this.btnnewbook.Size = new System.Drawing.Size(75, 23);
+            this.btnnewbook.TabIndex = 1;
+            this.btnnewbook.Text = "Add new";
+            this.btnnewbook.UseVisualStyleBackColor = true;
+            this.btnnewbook.Click += new System.EventHandler(this.btnnewbook_Click);
             // 
-            // button4
+            // btnpopbook
             // 
-            this.button4.Location = new System.Drawing.Point(3, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Refresh";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnpopbook.Location = new System.Drawing.Point(3, 3);
+            this.btnpopbook.Name = "btnpopbook";
+            this.btnpopbook.Size = new System.Drawing.Size(75, 23);
+            this.btnpopbook.TabIndex = 0;
+            this.btnpopbook.Text = "Refresh";
+            this.btnpopbook.UseVisualStyleBackColor = true;
+            this.btnpopbook.Click += new System.EventHandler(this.btnpopbook_Click);
             // 
-            // button5
+            // btnmodbook
             // 
-            this.button5.Location = new System.Drawing.Point(3, 61);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Modify";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnmodbook.Location = new System.Drawing.Point(3, 61);
+            this.btnmodbook.Name = "btnmodbook";
+            this.btnmodbook.Size = new System.Drawing.Size(75, 23);
+            this.btnmodbook.TabIndex = 2;
+            this.btnmodbook.Text = "Modify";
+            this.btnmodbook.UseVisualStyleBackColor = true;
+            this.btnmodbook.Click += new System.EventHandler(this.btnmodbook_Click);
             // 
             // panel1
             // 
@@ -133,10 +135,10 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.btndelbook);
+            this.panel2.Controls.Add(this.btnmodbook);
+            this.panel2.Controls.Add(this.btnnewbook);
+            this.panel2.Controls.Add(this.btnpopbook);
             this.panel2.Location = new System.Drawing.Point(468, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(80, 175);
@@ -152,43 +154,43 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.btnnewnote);
+            this.panel3.Controls.Add(this.btndelnote);
+            this.panel3.Controls.Add(this.btnsavenote);
             this.panel3.Location = new System.Drawing.Point(468, 193);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(80, 157);
             this.panel3.TabIndex = 9;
             // 
-            // button7
+            // btnnewnote
             // 
-            this.button7.Location = new System.Drawing.Point(2, 25);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Add new";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnnewnote.Location = new System.Drawing.Point(2, 25);
+            this.btnnewnote.Name = "btnnewnote";
+            this.btnnewnote.Size = new System.Drawing.Size(75, 23);
+            this.btnnewnote.TabIndex = 4;
+            this.btnnewnote.Text = "Add new";
+            this.btnnewnote.UseVisualStyleBackColor = true;
+            this.btnnewnote.Click += new System.EventHandler(this.btnnewnote_Click);
             // 
-            // button3
+            // btndelnote
             // 
-            this.button3.Location = new System.Drawing.Point(3, 131);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.btndelnote.Location = new System.Drawing.Point(3, 131);
+            this.btndelnote.Name = "btndelnote";
+            this.btndelnote.Size = new System.Drawing.Size(75, 23);
+            this.btndelnote.TabIndex = 6;
+            this.btndelnote.Text = "Delete";
+            this.btndelnote.UseVisualStyleBackColor = true;
+            this.btndelnote.Click += new System.EventHandler(this.btndelnote_Click);
             // 
-            // button6
+            // btnsavenote
             // 
-            this.button6.Location = new System.Drawing.Point(2, 54);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Save";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnsavenote.Location = new System.Drawing.Point(2, 54);
+            this.btnsavenote.Name = "btnsavenote";
+            this.btnsavenote.Size = new System.Drawing.Size(75, 23);
+            this.btnsavenote.TabIndex = 5;
+            this.btnsavenote.Text = "Save";
+            this.btnsavenote.UseVisualStyleBackColor = true;
+            this.btnsavenote.Click += new System.EventHandler(this.btnsavenote_Click);
             // 
             // Form1
             // 
@@ -200,7 +202,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Book log";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -216,17 +218,17 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btndelbook;
+        private System.Windows.Forms.Button btnnewbook;
+        private System.Windows.Forms.Button btnpopbook;
+        private System.Windows.Forms.Button btnmodbook;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnsavenote;
+        private System.Windows.Forms.Button btndelnote;
+        private System.Windows.Forms.Button btnnewnote;
     }
 }
 

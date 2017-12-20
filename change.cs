@@ -24,12 +24,34 @@ namespace knyga2_01
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string name = textBox1.Text;
-            int psl = Convert.ToInt32(textBox2.Text);
-            int read = Convert.ToInt32(textBox3.Text);
+            try
+            {
+                int psl = Convert.ToInt32(textBox2.Text);
+                int read = Convert.ToInt32(textBox3.Text);
+                string name = textBox1.Text;
+                if (psl < read)
+                {
+                    MessageBox.Show("You can read more pages than there are in a book duuuh");
+                }
+                else
+                {
+                    try
+                    {
+                        sqlcommands.addnew(name, psl, read);
+                        Close();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error updating");
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Input error");
+            }
+            
 
-            sqlcommands.addnew(name,psl,read);
-            Close();
         }
 
         private void getdetails()

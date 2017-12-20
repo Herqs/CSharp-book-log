@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="knyga2_01.exe" size="49616">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="knyga2_01.exe" size="50640">
       <assemblyIdentity name="knyga2_01" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>e/FcF+zJctzDEyxV0Nz8pNtg+jH+cVA6rPfOpzb9YrY=</dsig:DigestValue>
+        <dsig:DigestValue>S91xSbfJLU5bI858i4fck4RFVGz39Mft+G1FtWQdHio=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
