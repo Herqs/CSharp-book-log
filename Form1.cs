@@ -81,7 +81,13 @@ namespace knyga2_01
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            refreshnotes();
+            if (listView1.SelectedItems.Count > 0)
+            {
+                if (listView1.SelectedItems[0].Tag != null)
+                {
+                    refreshnotes();
+                }
+            }
         }
 
         private void refreshnotes()
