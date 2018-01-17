@@ -14,5 +14,4 @@ C:\Users\Herqs\source\repos\knyga2_01\knyga2_01\obj\Debug\knyga2_01.exe.manifest
 C:\Users\Herqs\source\repos\knyga2_01\knyga2_01\obj\Debug\knyga2_01.application
 C:\Users\Herqs\source\repos\knyga2_01\knyga2_01\bin\Debug\Database1.mdf
 C:\Users\Herqs\source\repos\knyga2_01\knyga2_01\bin\Debug\Database1_log.ldf
-C:\Users\Herqs\source\repos\knyga2_01\knyga2_01\obj\Debug\knyga2_01.change.resources
 C:\Users\Herqs\source\repos\knyga2_01\knyga2_01\obj\Debug\knyga2_01.Form2.resources

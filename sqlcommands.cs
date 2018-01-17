@@ -68,7 +68,7 @@ namespace knyga2_01
         {
             SqlConnection con = new SqlConnection(constr);
             con.Open();
-            SqlDataAdapter ada = new SqlDataAdapter("SELECT * FROM Knygos WHERE ID="+id, con);
+            SqlDataAdapter ada = new SqlDataAdapter("SELECT * FROM Knygos WHERE Id="+id, con);
 
             DataTable dt = new DataTable();
             ada.Fill(dt);

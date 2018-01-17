@@ -49,7 +49,7 @@ namespace knyga2_01
 
         private void btnnewbook_Click(object sender, EventArgs e)
         {
-                change frm2 = new change(0);
+                Form2 frm2 = new Form2(0);
                 frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
                 frm2.Show();
         }
@@ -137,8 +137,8 @@ namespace knyga2_01
             try
             {
                 custompage cp = (custompage)tabControl1.SelectedTab.Tag;
-                MessageBox.Show($"Note #{tabControl1.TabPages.Count} has been updated");
                 sqlcommands.modifynote(cp.id, cp.asd, Convert.ToInt16(listView1.SelectedItems[0].Tag));
+                MessageBox.Show($"Note #{tabControl1.TabPages.Count} has been updated");
             }
             catch
             {

@@ -15,7 +15,6 @@ namespace knyga2_01
             ListViewItem lwi = new ListViewItem(row[1].ToString());
             lwi.SubItems.Add(row[2].ToString());
             lwi.SubItems.Add(row[3].ToString());
-            lwi.Tag = (row[0]);
             try
             {
                 double percent = Math.Round(Convert.ToDouble(row[3]) / Convert.ToDouble(row[2]) * 100, 2);
@@ -24,7 +23,6 @@ namespace knyga2_01
             catch { }
 
             lwi.Tag = Convert.ToInt16(row[0]);
-
 
             return lwi;
         }
